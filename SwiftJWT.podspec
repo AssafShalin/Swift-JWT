@@ -6,7 +6,9 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/IBM-Swift/Swift-JWT"
   s.license      = { :type => "APACHE 2.0", :file => "LICENSE" }
   s.authors      = { "Shihab Mehboob" => "shihab.mehboob1@ibm.com" }
-  s.platform     = :ios, "10.0"
+  s.osx.deployment_target = "10.11"
+  s.ios.deployment_target = "10.0"
+  s.tvos.deployment_target = "10.0"
   s.source       = { :git => "https://github.com/IBM-Swift/Swift-JWT", :branch => "Pod", :submodules => true }
   s.subspec 'Cryptor' do |cryptor|
     cryptor.source_files = 'Sources/SwiftJWT/Cryptor/*.swift'
